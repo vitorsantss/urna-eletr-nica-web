@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Eleitores
+{% endblock page_title %}
+
+{% block content %}
+<h1 class="mb-5">Eleitores</h1>
+
+{% if eleitor_list %}
+    <table class="table mb-5">
+        <thead>
+        <tr>
+            <th scope="col">Titulo de Eleitor</th>
+            <th scope="col">Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for eleitor in eleitor_list %}
+                <tr>
+                    <th scope="row">{{ eleitor.tituloEleitor }}</th>
+                    <td>{{ eleitor.nome }}</td>
+                    <td>
+                        <a 
+                            href="{% url "eleitor_delete" pk=eleitor.pk %}" 
+                            class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p class="mb-5">Não há eleitores cadastrados</p>
+  {% endif %}
+
+  <a href="{% url "eleitor_create" %}" class="btn btn-success">Cadastrar eleitor</a>
+  <a href="{% url "urna_home" %}" class="btn btn-secondary">Voltar ao menu</a> 
+
+{% endblock content %}

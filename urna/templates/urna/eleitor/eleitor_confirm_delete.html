@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Excluir Eleitor
+{% endblock page_title %}
+
+{% block content %}
+    <h1>Excluir Eleitor?</h1>
+
+    <p class="mb-5">Tem certeza que deseja excluir o eleitor <strong>{{ eleitor.nome }}</strong>?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a href="{% url "candidato_list" %}" class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Voto Registrado
+{% endblock page_title %}
+
+{% block content %}
+
+{% if votoEleitor %}
+    <h1 class="mb-5">O eleitor {{ eleitor.nome }} já votou!</h1>
+{% else %}
+<h1 class="mb-5">Voto do eleitor {{ eleitor.nome }} registrado!</h1>
+{% endif %}
+
+<h3 class="mb-5">Comprovante:</h3>
+
+<table class="table mb-5">
+    <thead>
+    <tr>
+        <th scope="col">Titulo de Eleitor</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Voto</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <th scope="row">{{ eleitor.tituloEleitor }}</th>
+                <td>{{ eleitor.nome }}</td>
+                <td>{{ eleitor.voto }}</td>
+            </tr>
+    </tbody>
+</table>
+
+<a href="{% url "urna_home" %}" class="btn btn-success">Voltar ao menu</a>
+
+{% endblock content %}

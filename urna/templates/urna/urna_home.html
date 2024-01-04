@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Home
+{% endblock page_title %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <h1 class="mb-5">Menu</h1>
+    <div class="row justify-content-center mb-3">
+      <a href="{% url "candidato_list" %}" class="btn btn-success mt-3 btn-lg m-3 col-6 col-sm-3">Candidatos</a>
+      <a href="{% url "eleitor_list" %}" class="btn btn-success mt-3 btn-lg m-3 col-6 col-sm-3">Eleitores</a>
+    </div>
+    <div class="w-100"></div>
+    <div class="row justify-content-center">
+      <a href="{% url "secao_eleitoral" %}" class="btn btn-success mt-3 btn-lg m-3 col-6 col-sm-3 {% if candidatos < 2 %}disabled{% endif %} ">Votação</a>
+      <a href="{% url "votacao_resultado" %}" class="btn btn-success mt-3 btn-lg m-3 col-6 col-sm-3 {% if candidatos < 2 %}disabled{% endif %} ">Resultado</a>
+    </div>
+  </div>
+{% endblock content %}

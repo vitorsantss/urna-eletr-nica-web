@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Candidatos
+{% endblock page_title %}
+
+{% block content %}
+<h1 class="mb-5">Candidatos</h1>
+
+{% if candidato_list %}
+    <table class="table mb-5">
+        <thead>
+        <tr>
+            <th scope="col">Número</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Partido</th>
+            <th scope="col">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for candidato in candidato_list %}
+                <tr>
+                    <th scope="row">{{ candidato.numero }}</th>
+                    <td>{{ candidato.nome }}</td>
+                    <td>{{ candidato.partido }}</td>
+                    <td>
+                        <a 
+                            href="{% url "candidato_update" pk=candidato.pk %}" 
+                            class="btn btn-secondary btn-sm">Editar</a>
+                        <a 
+                            href="{% url "candidato_delete" pk=candidato.pk %}" 
+                            class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p class="mb-5">Não há candidatos cadastrados</p>
+  {% endif %}
+
+  <a href="{% url "candidato_create" %}" class="btn btn-success">Cadastrar candidato</a>
+  <a href="{% url "urna_home" %}" class="btn btn-secondary">Voltar ao menu</a> 
+
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Resultado Votação
+{% endblock page_title %}
+
+{% block content %}
+    {% if candidatos %}
+    <h1 class="mb-4">Relatório da sessão</h1>
+    <table class="table mb-5">
+        <thead>
+            <tr>
+                <th scope="col">Número</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Partido</th>
+                <th scope="col">Votos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidato in candidatos %}
+                <tr>
+                    <th scope="row">{{ candidato.numero }}</th>
+                    <td>{{ candidato.nome }}</td>
+                    <td>{{ candidato.partido }}</td>
+                    <td>{{ candidato.votos|stringformat:"04d" }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <table class="table mb-5">
+        <thead>
+            <tr>
+                <th scope="col">Descrição</th>
+                <th scope="col">Votos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Eleitores Aptos</td>
+                <td>{{ eleitoresApts }}</td>
+            </tr>
+            <tr>
+                <td>Total de votos nominais</td>
+                <td>{{ votosNominais|stringformat:"04d" }}</td>
+            </tr>
+            <tr>
+                <td>Brancos</td>
+                <td>{{ totalBrancos|stringformat:"04d" }}</td>
+            </tr>
+            <tr>
+                <td>Nulos</td>
+                <td>{{ totalNulos|stringformat:"04d" }}</td>
+            </tr>
+            <tr>
+                <td>Total Apurado</td>
+                <td>{{ totalVotos|stringformat:"04d" }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        {% else %}
+            <p class="mb-5">Não há candidatos cadastrados</p>
+    {% endif %}
+
+    <a href="{% url "urna_home" %}" class="btn btn-secondary mb-5">Voltar ao menu</a> 
+{% endblock content %}

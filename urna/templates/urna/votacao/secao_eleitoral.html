@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Seção Eleitoral
+{% endblock page_title %}
+
+    
+
+{% block content %}
+<h1 class="mb-4">Seção Eleitoral</h1>
+
+<div>
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="tituloEleitor" class="form-label">Titulo de Eleitor</label>
+        <input type="text" class="form-control mb-4" name="tituloEleitor" id="tituloEleitor">
+        
+
+        <p><strong>Zona</strong><br>050</p>
+        <p><strong>Município/UF</strong><br>Parnamirim/RN</p>
+        <p><strong>Seção</strong><br>0303</p>
+        <p class="mb-4"><strong>Local</strong><br>IFRN Parnamirim - (Ens. Técnico, Grad. e Espec.)</p>
+    
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <a href="{% url "urna_home" %}" class="btn btn-secondary">Voltar ao menu</a> 
+    </form>
+</div>
+
+{% endblock content %}

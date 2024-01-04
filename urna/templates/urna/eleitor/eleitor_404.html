@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Eleitor 404
+{% endblock page_title %}
+
+{% block content %}
+
+<h2>O Eleitor não está apto para a votação!</h2>
+<p class="fs-4 mb-5">Titulo de eleitor: {{ eleitor }}</p>
+
+<a href="{% url "secao_eleitoral" %}" class="btn btn-success">Voltar para seção</a>
+
+{% endblock content %}
