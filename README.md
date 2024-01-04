@@ -1,14 +1,12 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Z4G88pWm)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13248432&assignment_repo_type=AssignmentRepo)
-# Urna Eletrônica - Projeto POO
+# Urna Eletrônica - Projeto Django
 
-## 1. Recursos necessário
+## 1. Recursos necessários
 
 Para desenvolver esse sistema foram usados este recursos:
 
-- Um executor de Python
-- Ambiente de desenvolvimento (Foi usado o VsCode)
+- Linguagem: Python
 - Framework: Django
+- Database: SQLite
 
 ## 2. Procedimento de Instalação da Aplicação
 
