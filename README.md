@@ -72,7 +72,7 @@ python manage.py runserver
 
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20144141.png)
 
-   Aqui será feito a requisição pelo titulo de eleitor para saber se está cadastrado no banco e se ele ainda não votou.Caso ele tenha votado e tente novamente vamos para essa tela:
+   Aqui será feito a requisição pelo titulo de eleitor para saber se está cadastrado no banco e se ele ainda não votou. Caso ele tenha votado e tente novamente vamos para essa tela:
    
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20144446.png)
 
@@ -80,14 +80,14 @@ python manage.py runserver
 
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20184411.png)
 
-   Aqui o eleitor tem que colocar o seu voto se elecolocar um número de candidato resgistrado no banco o nome e partido são exibidos, caso o número não esteja no banco o voto resgitrado será nulo. O eleitor também pode registra o voto em branco. 
+   Aqui o eleitor tem que colocar o seu voto, se ele colocar um número de um candidato registrado no banco, o nome e partido serão exibidos, caso o número não esteja no banco o voto resgitrado será nulo. O eleitor também pode registrar o voto como branco. 
    
    Após confirmar o voto vemos o comprovante da votação:
 
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20184425.png)
 
    ### 3.7 Resultado 
-   Na tela de "resultado" vemos um relatório dos votos que foram realizados:
+   Na tela de "resultado" vemos um relatório da seção de votação:
 
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20153710.png)
    
