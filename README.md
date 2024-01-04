@@ -90,5 +90,6 @@ python manage.py runserver
    Na tela de "resultado" vemos um relatório dos votos que foram realizados:
 
    ![Menu](/imagens/Captura%20de%20tela%202023-12-30%20153710.png)
+   
 
    

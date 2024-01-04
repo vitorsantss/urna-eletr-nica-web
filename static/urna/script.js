@@ -95,3 +95,4 @@ function confirmar() {
 document.addEventListener('DOMContentLoaded', function() {
   atualizarEstadoBotao();
 });
+

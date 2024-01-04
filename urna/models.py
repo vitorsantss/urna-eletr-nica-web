@@ -57,3 +57,4 @@ class Eleitor(models.Model):
     def adicionarVoto(self, voto):
         self.voto = voto
         self.save()
+

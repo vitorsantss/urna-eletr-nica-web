@@ -41,3 +41,4 @@ urlpatterns = [
     path("candidatos/buscar", BuscarCandidatoView.as_view(), name="buscar_candidato"),
     path("resultado", ResultadoVotacaoView.as_view(), name="votacao_resultado")
 ]
+
